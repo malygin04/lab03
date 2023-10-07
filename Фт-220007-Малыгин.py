@@ -94,8 +94,6 @@ elif check_move_in_two_steps(figure, k, l, m, n):
     if next_move:
         print("Фигура", figure, "может попасть на поле (", m, ",", n, ") за два хода.")
         print("Следующий ход: (", next_move[0], ",", next_move[1], ")")
-    else:
-        print("Фигура", figure, "может попасть на поле (", m, ",", n, ") за два хода.")
 else:
     print("Фигура", figure, "не может попасть на поле (", m, ",", n, ") за два хода.")
 
