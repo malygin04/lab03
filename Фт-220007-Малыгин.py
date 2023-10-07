@@ -31,6 +31,25 @@ def check_move(figure, k, l, m, n):
             return True
         return False
 
+# Функция для определения возможности попадания на поле за два хода
+def check_move_in_two_steps(figure,k, l, m, n):
+    if figure == "слон":
+        for i in range(1, 9):
+            for j in range(1, 9):
+                if abs(k - i) == abs(l - j) and abs(i - m) == abs(j - n):
+                    return True
+        return False
+    else:
+        return False
+
+# Функция для определения клетки, в которую фигура сможет попасть после двух ходов
+def get_next_move(figure, k, l, m, n):
+    for i in range(1, 9):
+        for j in range(1, 9):
+            if check_move(figure, k, l, i, j) and check_move(figure, i, j, m, n):
+                return i, j
+    return None
+
 # Основная часть программы
 print("Введите координаты первого поля (k, l):")
 k = int(input())
@@ -67,11 +86,19 @@ if check_threat(figure, k, l, m, n):
 else:
     print("Фигура не угрожает полю (m, n).")
 
+# Проверка возможности попадания на поле
 if check_move(figure, k, l, m, n):
-    print("Фигура может попасть на поле (m, n) одним ходом.")
+    print("Фигура", figure, "может попасть на поле (", m, ",", n, ") одним ходом.")
+elif check_move_in_two_steps(figure, k, l, m, n):
+    next_move = get_next_move(figure, k, l, m, n)
+    if next_move:
+        print("Фигура", figure, "может попасть на поле (", m, ",", n, ") за два хода.")
+        print("Следующий ход: (", next_move[0], ",", next_move[1], ")")
+    else:
+        print("Фигура", figure, "может попасть на поле (", m, ",", n, ") за два хода.")
 else:
-    print("Фигура не может попасть на поле (m, n) одним ходом.")
-    print("Для попадания на поле (m, n) за два хода можно сделать первый ход на поле (k, l + 1).")
+    print("Фигура", figure, "не может попасть на поле (", m, ",", n, ") за два хода.")
+
 
 
 
