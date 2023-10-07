@@ -20,10 +20,12 @@
 
 Скриншоты тестов:
 
-![image](https://github.com/malygin04/lab03/assets/102820638/93b10d33-3c64-448f-99c7-130c72378e88)
+![рисунок](https://github.com/malygin04/lab03/assets/102820638/243bb598-d79f-404a-9f2d-96ff8dd4acc8)
 
-![лабораторная работа №3(2)](https://github.com/malygin04/lab03/assets/102820638/bcfb0ba6-77fa-4d12-9184-d2ec5d164c8e)
+![рисунок 2](https://github.com/malygin04/lab03/assets/102820638/53e63f9f-1354-4549-9595-b62fc32165b0)
 
-![лабораторная работа № 3(3)](https://github.com/malygin04/lab03/assets/102820638/5318435e-ac0c-489c-bade-77f4d9b703cc)
+![рисунок 3](https://github.com/malygin04/lab03/assets/102820638/cd04d6e0-3cb4-40fe-82a5-5bf5fcb3f39a)
+
+
 
 
